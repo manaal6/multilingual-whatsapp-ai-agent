@@ -1,0 +1,211 @@
+
+<style>
+  .tc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; padding: 1rem 0 2rem; }
+  .tc-card { border-radius: 16px; border: 0.5px solid var(--color-border-tertiary); overflow: hidden; display: flex; flex-direction: column; background: var(--color-background-primary); }
+  .tc-preview { aspect-ratio: 9/16; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 12px; text-align: center; position: relative; min-height: 160px; }
+  .tc-preview.bg-dark { background: #080810; }
+  .tc-preview.bg-purple { background: #110d24; }
+  .tc-preview.bg-teal { background: #041912; }
+  .tc-preview.bg-blue { background: #060f1e; }
+  .tc-preview.bg-amber { background: #160d00; }
+  .tc-preview.bg-coral { background: #180800; }
+  .tc-preview.bg-cta { background: #080810; }
+  .tc-number { position: absolute; top: 10px; left: 12px; font-size: 11px; font-weight: 500; opacity: 0.35; color: #fff; letter-spacing: 0.05em; }
+  .tc-tag { position: absolute; top: 10px; right: 10px; font-size: 10px; font-weight: 500; padding: 3px 8px; border-radius: 99px; color: #fff; opacity: 0.75; }
+  .tc-big { font-size: clamp(16px, 3.2vw, 24px); font-weight: 700; line-height: 1.2; letter-spacing: -0.025em; color: #fff; margin: 0 0 8px; font-family: var(--font-sans), system-ui, sans-serif; text-wrap: balance; }
+  .tc-big .ap { color: #AFA9EC; }
+  .tc-big .at { color: #5DCAA5; }
+  .tc-big .ab { color: #85B7EB; }
+  .tc-big .aa { color: #EF9F27; }
+  .tc-big .ac { color: #F0997B; }
+  .tc-big .ag { color: #97C459; }
+  .tc-big .aw { color: #ffffff; opacity: 0.45; }
+  .tc-sub { font-size: 10.5px; font-weight: 400; color: rgba(255,255,255,0.45); line-height: 1.5; margin: 0; font-family: var(--font-sans), system-ui, sans-serif; }
+  .tc-eyebrow { font-size: 9.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin: 0 0 8px; }
+  .tc-info { padding: 11px 13px; border-top: 0.5px solid var(--color-border-tertiary); }
+  .tc-label { font-size: 10px; font-weight: 500; color: var(--color-text-secondary); margin: 0 0 5px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .tc-row { display: flex; gap: 5px; flex-wrap: wrap; }
+  .tc-pill { font-size: 10px; padding: 2px 7px; border-radius: 99px; background: var(--color-background-tertiary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); white-space: nowrap; }
+  .tc-pill.pa { background: #26215C; color: #AFA9EC; border-color: #534AB7; }
+  .tc-pill.pd { background: #04342C; color: #5DCAA5; border-color: #0F6E56; }
+  .tc-pill.pb { background: #042C53; color: #85B7EB; border-color: #185FA5; }
+  .section-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.08em; margin: 1.5rem 0 0.75rem; }
+  .divider-bar { height: 1px; background: var(--color-border-tertiary); margin: 1.5rem 0; }
+  .context-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 1rem; }
+  .context-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+  .context-row:last-child { margin-bottom: 0; }
+  .context-num { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); min-width: 18px; }
+  .context-text { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .context-text strong { font-weight: 500; color: var(--color-text-primary); }
+</style>
+
+<p class="section-label">LinkedIn-optimised title cards</p>
+<div class="tc-grid">
+
+  <!-- HOOK -->
+  <div class="tc-card">
+    <div class="tc-preview bg-dark">
+      <span class="tc-number">01</span>
+      <span class="tc-tag" style="background:#534AB7;">HOOK</span>
+      <p class="tc-eyebrow">I built this in 2 weeks</p>
+      <p class="tc-big">A WhatsApp AI<br>that <span class="ap">sells</span> while<br>you sleep.</p>
+      <p class="tc-sub">No human. No missed lead.</p>
+    </div>
+    <div class="tc-info">
+      <p class="tc-label">Scene specs</p>
+      <div class="tc-row">
+        <span class="tc-pill pd">2.5 sec</span>
+        <span class="tc-pill pb">Pure black</span>
+        <span class="tc-pill pa">Smash cut + zoom</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE 1: Voice AI -->
+  <div class="tc-card">
+    <div class="tc-preview bg-purple">
+      <span class="tc-number">02</span>
+      <span class="tc-tag" style="background:#3C3489;">VOICE AI</span>
+      <p class="tc-eyebrow">Feature 01</p>
+      <p class="tc-big">Customer<br>sends a voice.<br><span class="ap">AI understands.</span></p>
+      <p class="tc-sub">Instantly. Every single time.</p>
+    </div>
+    <div class="tc-info">
+      <p class="tc-label">Scene specs</p>
+      <div class="tc-row">
+        <span class="tc-pill pd">3 sec</span>
+        <span class="tc-pill pb">Deep purple</span>
+        <span class="tc-pill pa">Line-by-line reveal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE 2: Multilingual -->
+  <div class="tc-card">
+    <div class="tc-preview bg-teal">
+      <span class="tc-number">03</span>
+      <span class="tc-tag" style="background:#0F6E56;">MULTILINGUAL</span>
+      <p class="tc-eyebrow">Feature 02</p>
+      <p class="tc-big">Urdu. Arabic.<br>Hindi. English.<br><span class="at">It just works.</span></p>
+      <p class="tc-sub">No language config. Zero.</p>
+    </div>
+    <div class="tc-info">
+      <p class="tc-label">Scene specs</p>
+      <div class="tc-row">
+        <span class="tc-pill pd">3 sec</span>
+        <span class="tc-pill pb">Dark teal</span>
+        <span class="tc-pill pa">Staggered word fade</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE 3: AI Voice Reply -->
+  <div class="tc-card">
+    <div class="tc-preview bg-blue">
+      <span class="tc-number">04</span>
+      <span class="tc-tag" style="background:#185FA5;">VOICE REPLY</span>
+      <p class="tc-eyebrow">Feature 03</p>
+      <p class="tc-big">It doesn't<br>type back.<br><span class="ab">It talks back.</span></p>
+      <p class="tc-sub">AI voice — sounds human.</p>
+    </div>
+    <div class="tc-info">
+      <p class="tc-label">Scene specs</p>
+      <div class="tc-row">
+        <span class="tc-pill pd">3 sec</span>
+        <span class="tc-pill pb">Navy blue</span>
+        <span class="tc-pill pa">Waveform pulse</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE 4: Lead Capture -->
+  <div class="tc-card">
+    <div class="tc-preview bg-amber">
+      <span class="tc-number">05</span>
+      <span class="tc-tag" style="background:#854F0B;">LEADS</span>
+      <p class="tc-eyebrow">Feature 04</p>
+      <p class="tc-big">Name. Phone.<br>Service needed.<br><span class="aa">Auto-saved.</span></p>
+      <p class="tc-sub">Your CRM doesn't need to lift a finger.</p>
+    </div>
+    <div class="tc-info">
+      <p class="tc-label">Scene specs</p>
+      <div class="tc-row">
+        <span class="tc-pill pd">3 sec</span>
+        <span class="tc-pill pb">Dark amber</span>
+        <span class="tc-pill pa">Row count-up</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="tc-card">
+    <div class="tc-preview bg-coral">
+      <span class="tc-number">06</span>
+      <span class="tc-tag" style="background:#993C1D;">DASHBOARD</span>
+      <p class="tc-eyebrow">The result</p>
+      <p class="tc-big">Every lead.<br>Every call.<br><span class="ac">One dashboard.</span></p>
+      <p class="tc-sub">Real-time. No spreadsheet needed.</p>
+    </div>
+    <div class="tc-info">
+      <p class="tc-label">Scene specs</p>
+      <div class="tc-row">
+        <span class="tc-pill pd">3 sec</span>
+        <span class="tc-pill pb">Dark coral</span>
+        <span class="tc-pill pa">Rows slide in</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="tc-card">
+    <div class="tc-preview bg-cta">
+      <span class="tc-number">07</span>
+      <span class="tc-tag" style="background:#533400;">CTA</span>
+      <p class="tc-big">Founders —<br>your sales team<br><span class="aa">just got replaced.</span></p>
+      <p class="tc-sub">Comment BUILD → I'll send the breakdown.</p>
+    </div>
+    <div class="tc-info">
+      <p class="tc-label">Scene specs</p>
+      <div class="tc-row">
+        <span class="tc-pill pd">4 sec</span>
+        <span class="tc-pill pb">Pure black</span>
+        <span class="tc-pill pa">Hold + slow zoom</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider-bar"></div>
+
+<p class="section-label">Why each line works on LinkedIn</p>
+<div class="context-card">
+  <div class="context-row">
+    <span class="context-num">01</span>
+    <span class="context-text"><strong>"sells while you sleep"</strong> — triggers founder FOMO in the first 2 seconds. LinkedIn's algorithm rewards watch time; this forces a pause.</span>
+  </div>
+  <div class="context-row">
+    <span class="context-num">02</span>
+    <span class="context-text"><strong>"AI understands. Instantly."</strong> — confident, no hedge words. LinkedIn audiences respond to certainty over explanation.</span>
+  </div>
+  <div class="context-row">
+    <span class="context-num">03</span>
+    <span class="context-text"><strong>"It just works."</strong> — 3 words that eliminate objections before they form. Familiar enough to land, specific enough to mean something.</span>
+  </div>
+  <div class="context-row">
+    <span class="context-num">04</span>
+    <span class="context-text"><strong>"It talks back"</strong> — the contrast with "type back" is the hook. Unexpected phrasing = re-watch.</span>
+  </div>
+  <div class="context-row">
+    <span class="context-num">05</span>
+    <span class="context-text"><strong>"Auto-saved"</strong> — pain-point language. Every founder has lost a lead. This card hits that nerve directly.</span>
+  </div>
+  <div class="context-row">
+    <span class="context-num">06</span>
+    <span class="context-text"><strong>"No spreadsheet needed"</strong> — everyone on LinkedIn has been burned by spreadsheet chaos. Instant relatability.</span>
+  </div>
+  <div class="context-row">
+    <span class="context-num">07</span>
+    <span class="context-text"><strong>"Comment BUILD"</strong> — keyword comment CTAs boost LinkedIn reach algorithmically. "Your sales team got replaced" provokes a reaction share.</span>
+  </div>
+</div>
